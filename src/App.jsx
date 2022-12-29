@@ -10,7 +10,7 @@ import './App.css'
   
   setTimeout(() =>{
     loader?.classList.add("hide")
-  }, 3000)
+  }, 1000)
   useEffect(()=>{
 
    

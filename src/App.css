@@ -52,7 +52,10 @@ span{
 .ClimaVariantes img{
   width: 150px;
 }
-
+.ListaDos{
+  position: relative;
+  left: 5px;
+}
 
 .ListaUno{
   position: relative;
@@ -60,7 +63,7 @@ span{
 }
 .ListaTres{
   position: relative;
-  left: 15px ;
+  left: 17px ;
 }
 .Location{
    position: relative;
