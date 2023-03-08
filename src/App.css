@@ -1,123 +1,387 @@
-body{
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+:root {
+  --Buton-Color: rgb(140, 43, 140);
+  --Color-Fondo: #fff;
+  --Viento: blue;
+  --Temp: yellow;
+}
+
+
+body {
   background-image: url("./assets/beautiful-sunset-beach-landscape-with-boat.jpg");
+  font-family: 'Manrope', sans-serif;
+
 }
 
 
-*{
- box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.Clima{
-  display: flex;
-  align-items: center;
-  padding: 10rem;
-  justify-content: center;
- }
+.title {
+  color: rgb(19, 114, 223);
+  font-size: 35px;
+  margin-bottom: 1.5rem;
+}
 
- .App{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-bottom: 10px;
+.viento {
+  color: var(--Viento);
+  font-size: 1.5rem;
+}
+
+.cloud {
+  color: var(--Color-Fondo);
+  font-size: 1.5rem;
+}
+
+.temp {
+  color: var(--Temp);
+  font-size: 1.5rem;
+}
+
+
+
+
+
+.Wather-Container {
+  width: 360px;
+  height: 400px;
   box-shadow: 2px 2px 8px rgb(0, 0, 0);
   background-color: rgba(92, 88, 88, 0.493);
-  width: 500px;
-  height: 450px;
-  text-align: center;
- 
+  display: block;
+  margin: 0 auto;
+  margin: 50% auto;
+  padding: 1rem;
 
 }
-.Contenido{
+
+.Location {
+  text-align: center;
+  padding: 1rem;
+  margin-bottom: 15px;
+}
+
+.ClimaVariantes {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0 40px;
+  justify-content: center;
+  gap: 3rem;
 }
 
-.ClimaVariantes{
- display: flex;
- align-items: center;
- gap: 2rem;
- margin-bottom: -13rem;
- color: blue;
-}
-
-span{
-  color: black;
-}
-.ClimaVariantes ul{
+.Lista {
+  margin-bottom: 14px;
   list-style-type: none;
- 
 }
-.ClimaVariantes img{
-  width: 150px;
-}
-.ListaDos{
+
+.Buton {
   position: relative;
-  left: 5px;
-}
-
-.ListaUno{
-  position: relative;
-  left: 27px;
-}
-.ListaTres{
-  position: relative;
-  left: 19px ;
-}
-.Location{
-   position: relative;
-   bottom: 80px;
-   color: blue;
-}
-.Location h2{
-  text-align: center;
-}
-
-.BotonGrados{
-   position: relative;
-   bottom: -120px;
-}
-
-.BotonGrados button{
-  background-color: blueviolet;
-  color: white;
-  cursor: pointer;
+  width: 90px;
+  height: 30px;
+  border-radius: 8px;
+  left: 110px;
+  bottom: -50px;
+  background-color: var(--Buton-Color);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0);
+  color: var(--Color-Fondo);
+  border: 0;
 }
 
 
-.loader{
-   background-color: whitesmoke;
-   width: 100%;
-   height: 100%;
-   position: fixed;
-   top: 0;
-   left: 0;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   z-index: 100;
+
+.loader {
+  background-color: whitesmoke;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
 }
-.loader.hide{
+
+.loader.hide {
   display: none;
 }
-.loader > svg{
+
+.loader>svg {
   width: 100px;
   position: relative;
   fill: red;
   animation: load 1.5s infinite;
 }
 
-@keyframes load{
+@keyframes load {
   0% {
     top: 0;
   }
-  50%{
+
+  50% {
     top: -30px;
   }
-  100%{
+
+  100% {
     top: 0;
   }
 }
 
+.Link {
+  text-align: center;
+  padding: 5rem;
 
+}
+
+.Link-Wather a {
+  text-decoration: none;
+  font-size: 28px;
+  color: var(--Color-Fondo);
+
+}
+
+.Link-Wather {
+  width: 230px;
+  height: 50px;
+  border-radius: 8px;
+  border: 0;
+  background-color: darkorange;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0);
+  cursor: pointer;
+}
+
+.Link-Wather:hover {
+  box-shadow: 0px 0px 20px darkorange;
+}
+
+.Link h2 {
+  margin-bottom: 2rem;
+  font-size: 24px;
+}
+
+.SobreMi {
+  display: none;
+}
+
+.Texto {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+
+  .Wather-Container {
+    width: 500px;
+    height: 500px;
+    padding: 4rem;
+    margin: 20% auto;
+  }
+
+  
+
+  .ClimaVariantes {
+    gap: 6rem;
+  }
+
+  .Buton {
+    position: relative;
+    width: 90px;
+    height: 30px;
+    border-radius: 8px;
+    left: 130px;
+    bottom: -70px;
+    background-color: var(--Buton-Color);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0);
+    color: var(--Color-Fondo);
+  }
+
+  .Link {
+    text-align: center;
+    padding: 5rem;
+
+  }
+
+  .Link-Wather a {
+    text-decoration: none;
+    font-size: 28px;
+    color: var(--Color-Fondo);
+
+  }
+
+  .Link-Wather {
+    width: 300px;
+    height: 50px;
+    border-radius: 8px;
+    border: 0;
+    background-color: darkorange;
+    cursor: pointer;
+    margin-bottom: 40px;
+    margin: 30px auto;
+  }
+
+  .Link h2 {
+    margin-bottom: 2rem;
+    font-size: 40px;
+  }
+
+  .SobreMi {
+    display: block;
+    height: 900px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    flex-direction: column;
+    box-shadow: 2px 2px 8px rgb(0, 0, 0);
+    background-color: rgba(92, 88, 88, 0.493);
+  }
+
+  .Texto {
+    display: block;
+    width: 700px;
+   }
+   
+
+
+  .Redes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    margin: 30px auto;
+  }
+
+  .Link h2 {
+    margin-bottom: 2rem;
+    font-size: 20px;
+    width: 300px;
+    margin: 0 auto;
+  }
+
+
+  .Circulo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: orange;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  .Circulo:hover {
+    box-shadow: 0px 0px 20px darkorange;
+  }
+
+  .Circulo a i {
+    font-size: 2rem;
+  }
+
+  .linke {
+    color: black;
+  }
+
+  .portafolio {
+    color: black;
+  }
+
+
+}
+
+@media screen and (min-width: 1024px) {
+
+
+  .Wather-Container {
+    margin: 10% auto;
+  }
+
+  .Link {
+    text-align: center;
+    padding: 2rem;
+
+  }
+
+  .Link-Wather a {
+    text-decoration: none;
+    font-size: 28px;
+    color: var(--Color-Fondo);
+
+  }
+
+  .Link-Wather {
+    width: 300px;
+    height: 50px;
+    border-radius: 8px;
+    border: 0;
+    background-color: darkorange;
+    cursor: pointer;
+    margin-bottom: 90px;
+  }
+
+  .Link h2 {
+    margin-bottom: 2rem;
+    font-size: 35px;
+  }
+
+  .SobreMi {
+    display: block;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    box-shadow: 2px 2px 8px rgb(0, 0, 0);
+    background-color: rgba(92, 88, 88, 0.493);
+  }
+
+  .Texto {
+    display: block;
+    width: 700px;
+  }
+
+  .Texto h2 {
+    font-size: 27px;
+    width: 500px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+
+  .Redes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+  }
+
+
+  .Circulo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: orange;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .Circulo:hover {
+    box-shadow: 0px 0px 20px darkorange;
+  }
+
+  .Circulo a i {
+    font-size: 2rem;
+  }
+
+  .linke {
+    color: black;
+  }
+
+  .portafolio {
+    color: black;
+  }
+
+
+
+}
